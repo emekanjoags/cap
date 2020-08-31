@@ -1,0 +1,152 @@
+{% extends 'layout/base.html'%}
+{%load static%}
+{% block title%}Make Donations{%endblock%}
+{%block content%}
+<div class="container" style="margin-top:30px;">
+    <div class="row">
+        <div class='col-12'>
+            <div>
+                <h4 class="side-stick">Donation Page</h4>
+                <!-- <p class="info-area"><b>Note: you can only reserve a user whose receiving amount is equal to or greater than the amount you want to donate.</b></p> -->
+                <p class="info-area">Please type in the amount you want to donate and proceed to reserve a user.&nbsp;<a href="#" class="colored-link">learn more</a></p>
+                <form class="rd-form">
+                    
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" >&#8358;</span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Donate in Naira" aria-label="Amount (to the nearest dollar)">
+                        <div class="input-group-append">
+                          <span class="input-group-text" >.00</span>
+                        </div>
+                      </div>
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="fa fa-bitcoin"></i></span>
+                        </div>
+                        <input type="text" placeholder="Donate in bitcoins" class="form-control" aria-label="Amount (to the nearest dollar)">
+                        
+                      </div>
+                      <div style="text-align:center;">
+                          <h4>or</h4>
+                      </div>
+                      <div style="text-align:center;margin-bottom:10px;">
+                        <button class="btn btn-warning">Bitcoin</button><button class="btn btn-warning">Naira</button>
+                    </div>
+                      
+                </form>
+            </div>
+            <div class="table-responsive cash-table">
+                <table class="table">
+                    <thead class="thead-dark"></thead>
+                      <tr style="background-color:#0a8cff;color:#ffffff">
+                        <th scope="col">S/N</th>
+                        <th scope="col">Username</th>
+                        <th scope="col">Transaction type </th>
+                        <th scope="col">Receiving Amount</th>
+                        <th scope="col">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>&#8358;</td>
+                        <td>54,000</td>
+                        <td><button type="button"
+                            class="btn btn-danger">Reserve
+                    </button></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td><i class="fa fa-bitcoin"></i></td>
+                        <td>0.0004</td>
+                        <td><button type="button"
+                            class="btn btn-danger">Reserve
+                    </button></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>&#8358;</td>
+                        <td>48,000</td>
+                        <td><button type="button"
+                            class="btn btn-danger">Reserve
+                    </button></td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+            <!-- <div class="table-responsive bitcoin-table">
+              <table class="table">
+                  <thead class="thead-dark"></thead>
+                    <tr style="background-color:#0a8cff;color:#ffffff">
+                      <th scope="col">S/N</th>
+                      <th scope="col">Username</th>
+                      <th scope="col">Transaction type </th>
+                      <th scope="col">Receiving Amount</th>
+                      <th scope="col">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Mark</td>
+                      <td><i class="fa fa-bitcoin"></td>
+                      <td>0.0035</td>
+                      <td><button type="button"
+                          class="btn btn-danger">Reserve
+                  </button></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Jacob</td>
+                      <td><i class="fa fa-bitcoin"></i></td>
+                      <td>0.0004</td>
+                      <td><button type="button"
+                          class="btn btn-danger">Reserve
+                  </button></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>Larry</td>
+                      <td><i class="fa fa-bitcoin"></td>
+                      <td>0.2353</td>
+                      <td><button type="button"
+                          class="btn btn-danger">Reserve
+                  </button></td>
+                    </tr>
+                  </tbody>
+                </table>
+          </div>
+             -->
+        </div>
+    </div>
+</div>
+{%endblock%}
+{% block outer %}
+<!-- BEGINING OF DEPOSIT MODAL -->
+<div id="donateDialog" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Select the amount you want to donate</h4>
+            </div>
+            <div class="modal-body">
+                <h5>User needs NGN20,000</h5>  
+                
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal" >Close
+                    </button>
+                    <button id="finish_btn" type="button" class="btn btn-success" data-dismiss='modal'>Finish
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- END OF MODAL -->
+{% endblock %}

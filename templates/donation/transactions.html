@@ -1,0 +1,38 @@
+{% extends "layout/base.html"%}
+{% load static%}
+{% block title%}Completed transactions{%endblock%}
+{%block content%}
+<div class="container"  style="margin-top:30px;">
+    <div class="row">
+        <div class="col-lg-12">
+            <h4 class="side-stick">Completed Transactions</h4>
+
+            <div class="toggle">
+                <button class="btn btn-danger">Donations</button> &nbsp;<button class="btn btn-outline-danger">Withdrawals</button>
+            </div>
+            <div class="col-md-4 list">
+                 <ul>
+                     <li>Account Name: Ugba Kingsley</li>
+                     <li>Bank Name: Zenith Bank</li>
+                     <li>Account Number: 100234242</li>
+                     <li>Amount: &#8358;30,000</li>
+                     <li>Date: 11/2/2020</li>
+                     <li>Phone: 09069199170 <a href="#">call</a></li>
+                 </ul><br>
+                
+            </div>
+
+            <div class="col-md-4 list">
+             <ul>
+                 <li>Account Name: Ugba Kingsley</li>
+                 <li>Bank Name: Zenith Bank</li>
+                 <li>Account Number: 100234242</li>
+                 <li>Amount: &#8358;30,000</li>
+                 <li>Date: 11/2/2020</li>
+                 <li>Phone: 09069199170 <a href="#">call</a></li>
+             </ul><br>
+        </div>
+            
+        </div>
+    </div> 
+{%endblock%}
