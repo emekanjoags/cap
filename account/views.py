@@ -10,12 +10,6 @@ from django.core import mail
 
 class ProfileDisplay(View):
     def get(self, request):
-
-        mail_subject = 'this is test'
-        raw_message = "this is trhe body"
-        from_email = "davido"
-        to_email = "njoagwuanidavid@gmail.com"
-        mail.send_mail(mail_subject, raw_message, from_email, [to_email])
         profile = Profile.objects.get(user=request.user)
         context = {
             "profile":profile
